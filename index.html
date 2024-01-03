@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11136020 王元平</title>
+    <!-- 引入Google Fonts字型 -->
+    <style>
+        /* CSS樣式部分 */
+
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat&family=Permanent+Marker&family=PT+Serif:wght@700&family=Noto+Serif+TC:wght@300&display=swap');
+
+        /* 全域樣式設定 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Anton', sans-serif;
+            margin: 0;
+            background-color: black;
+        }
+
+        .wrap {
+            width: 940px;
+            margin: 20px auto;
+        }
+
+        /* 頁面標題部分 */
+        header {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 0 30px;
+            border-radius: 20px;
+            background-color: #D9D9D9;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0; /* 置頂在上方 */
+            left: 0;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            z-index: 1000; /* 確保在最上層 */
+        }
+
+        header a {
+            color: black;
+            display: block;
+            text-decoration: none;
+        }
+
+        header h1 {
+            margin-right: auto;
+        }
+
+        ul.menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 12px;
+        }
+
+        ul.menu a {
+            padding: 10px 20px;
+        }
+
+        ul.menu a:hover {
+            background-color: #a3b18a;
+            border-radius: 20px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        ul.menu li img {
+            width: 30px;
+            height: 30px;
+            margin-left: 12px;
+        }
+
+        /* 頁面區塊樣式 */
+        section {
+            font-size: 30px;
+            width: 100%;
+            height: 500px;
+            padding: 10px 30px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            background-color: #fff;
+        }
+
+       /* 首頁區塊 */
+        section#HOME {
+            margin-top: 80px; /* 為了避免被 header 蓋住，添加 margin-top */
+            background-image: url('img/IMG_3946.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 40px;
+            position: relative;
+        }
+
+        section#HOME h1 {
+            font-size: 34px;
+            margin-bottom: 100px;
+            position: absolute;
+            left: 40px;
+            bottom: 0;
+            font-family: 'PT Serif', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        section#HOME h2 {
+            font-size: 24px;
+            margin: 60px;
+            position: absolute;
+            left: -18px;
+            bottom: 0;
+            color: white;
+            font-family: 'PT Serif', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 關於我區塊樣式 */
+        section#ABOUT {
+            background-image: url('img/IMG_3949.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #000000;
+            padding: 80px;
+            position: relative;
+        }
+
+        section#ABOUT h1 {
+            margin: 0;
+            font-size: 50px;
+            color: white;
+            height: 50px;
+            margin-left: 430px;
+            margin-top: 20px;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        section#ABOUT p {
+            margin: 0;
+            font-size: 18px;
+            color: white;
+            margin-left: 430px;
+            margin-top: 50px;
+        }
+
+        #englishIntro,
+        #chineseIntro {
+            font-family: 'Caveat', cursive;
+        }
+
+        #chineseIntro {
+            display: none;
+        }
+
+        #toggleLanguage {
+            position: absolute;
+            bottom: 20px;
+            right: 50px;
+            padding: 10px;
+            background-color: #adb5bd;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Noto Serif TC', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.256);
+        }
+
+        /* 專案區塊樣式 */
+        #PROJECTS {
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* 讓子元素水平居中 */
+            align-items: flex-start; /* 將子元素垂直排列在 flex 容器的開頭 */
+            flex-direction: row; /* 將子元素垂直排列 */
+        }
+
+        #PROJECTS h1 {
+            font-size: 50px;
+            color: white;
+            font-family: 'Permanent Marker', cursive;
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .project-item {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            width: 30%;
+            margin: 10px;
+            position: relative;
+            box-sizing: border-box; /* 防止外邊距導致元素超出容器 */
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item .image-container {
+            overflow: hidden;
+            border-radius: 10px;
+            height: auto;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .project-text {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: 'PT Serif', serif;
+            font-size: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.329), 0 0 5px rgb(0, 0, 0); /* 添加文字外框 */
+        }
+
+        /* 頁尾樣式 */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        // JavaScript
+
+        function showLightbox(imagePath, targetPage) {
+            console.log("Show lightbox for image: " + imagePath);
+
+            // 在這裡添加顯示燈箱的相應邏輯，可以使用第三方燈箱庫或自己實現
+
+            // 導航到另一個頁面
+            if (targetPage) {
+                window.location.href = targetPage;
+            }
+        }
+
+        function toggleLanguage() {
+            var englishIntro = document.getElementById('englishIntro');
+            var chineseIntro = document.getElementById('chineseIntro');
+
+            if (englishIntro.style.display === 'none') {
+                englishIntro.style.display = 'block';
+                chineseIntro.style.display = 'none';
+            } else {
+                englishIntro.style.display = 'none';
+                chineseIntro.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 頁首部分 -->
+        <header>
+            <h1 class="logo"><a href="index.html"><img src="img/camera.png" alt="Your Logo"> PHOTOGRAPHY</a></h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#HOME">HOME</a></li>
+                    <li><a href="#ABOUT">ABOUT</a></li>
+                    <li><a href="#PROJECTS">PROJECTS</a></li>
+                    <li><a href="https://www.instagram.com/pig_photo318/"><img src="img/instagram.png" alt="ig"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 首頁區塊 -->
+        <section id="HOME">
+            <h1>YUAN-PING WANG</h1>
+            <h2>PHOTOGRAPHY</h2>
+        </section>
+
+        <!-- 關於我區塊 -->
+        <section id="ABOUT">
+            <h1>ABOUT ME</h1>
+            <p id="englishIntro">Hi, I'm Yuan-Ping Wang, a passionate photographer  based in Taipei. My love for photography revolves around capturing the beauty of landscapes and nature. Whether it's the vibrant scenes of the city or the serene tranquility of natural settings, my lens seeks to tell a visual story of Taipei's diverse scenery.<br>
+            Join me on a journey through my photography, and experience the captivating narratives I unfold in each frame, showcasing the unique beauty of Taipei.</p>
+            <p id="chineseIntro" style="display: none;">大家好，我是王元平，一位來自台北的充滿熱情的攝影師。 我對攝影的熱愛圍繞著捕捉風景和自然之美。 無論是充滿活力的城市景觀還是寧靜的自然環境，我的鏡頭都力求講述台北多樣化風景的視覺故事。<br>和我一起踏上攝影之旅，體驗我在每個畫面中展開的迷人敘事，展現台北的獨特之美。</p>
+            <button id="toggleLanguage" onclick="toggleLanguage()">切換語言</button>
+        </section>
+
+        <!-- 專案區塊 -->
+        <section id="PROJECTS">
+            <h1>MY 2023 PROJECTS</h1>
+            <div class="project-item" onclick="showLightbox('img/動物/IMG_6300.jpg', 'Portraits.html')">
+                <div class="image-container">
+                    <img src="img/動物/IMG_6300.jpg" alt="Project 1">
+                </div>
+                <div class="project-caption">Photo 1</div>
+                <div class="project-text">Portraits</div>
+            </div>
+            <div class="project-item" onclick="showLightbox('img/自然風光/IMG_5475.jpg', 'view.html')">
+                <div class="image-container">
+                    <img src="img/自然風光/IMG_5475.jpg" alt="Project 2">
+                </div>
+                <div class="project-caption">Photo 2</div>
+                <div class="project-text">View</div>
+            </div>
+            <div class="project-item" onclick="showLightbox('img/城市/IMG_8181.jpg', 'city&food.html')">
+                <div class="image-container">
+                    <img src="img/城市/IMG_8181.jpg" alt="Project 3">
+                </div>
+                <div class="project-caption">Photo 3</div>
+                <div class="project-text">City&Food</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer>
+        <p> © 2023 by YUAN-PING WANG</p>
+    </footer>
+</body>
+
+</html>

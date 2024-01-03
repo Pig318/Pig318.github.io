@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11136020王元平</title>
+    <link href="lightbox.min.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Permanent+Marker&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat&family=PT+Serif:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Noto+Sans:wght@200&display=swap');
+        .portfolio {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-inline: auto;
+        }
+
+        .portfolio a {
+            display: block;
+            overflow: hidden;
+            transition: 0.2s;
+        }
+
+        .portfolio img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            opacity: 0.7;
+            transition: 0.2s;
+        }
+
+        .portfolio a:hover {
+            box-shadow: 0 0 0 8px #adb5bd;
+        }
+
+        .portfolio a:hover img {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        h1 {
+            color: white;
+            font-size: 36px;
+            margin-bottom: 16px;
+            font-family: 'Permanent Marker', cursive;
+            margin-left: 20px; /* 新增的左邊距 */
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Anton', sans-serif;
+            margin: 0;
+            background-color: black;
+        }
+
+        .wrap {
+            width: 940px;
+            margin: 20px auto;
+        }
+
+        /* 頁面標題部分 */
+        header {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 0 30px;
+            border-radius: 20px;
+            background-color: #D9D9D9;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0; /* 置頂在上方 */
+            left: 0;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            z-index: 1000; /* 確保在最上層 */
+        }
+
+        header a {
+            color: black;
+            display: block;
+            text-decoration: none;
+        }
+
+        header h1 {
+            margin-right: auto;
+            font-family: 'Anton', sans-serif;
+            font-size: 32px;
+        }
+
+        ul.menu {
+            display: flex; /*讓選單橫排*/
+            list-style: none;/*清除圓點*/
+            margin: 0;/*清除 ul 額外空間*/
+            padding: 0;/*清除 ul 額外空間*/
+            gap: 12px;
+        }
+        ul.menu a {
+            /*超連結的正常狀態*/
+            padding: 10px 20px;
+        }
+        ul.menu a:hover {
+            /*當滑鼠移上超連結時的狀態*/
+            background-color: #a3b18a;
+            border-radius: 20px;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px; 
+            margin-left: -20px;
+        }
+        ul.menu li img {
+            width: 30px; 
+            height: 30px; 
+            margin-left: 12px; 
+        }
+        #View-Projects {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        #View-Projects:hover {
+            color: burlywood;
+        }
+        a {
+            color: inherit; /* 繼承父元素的文字顏色 */
+            text-decoration: none; /* 去除底線 */
+        }
+        
+        a:hover {
+            color: inherit; /* 繼承父元素的文字顏色 */
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            color: white; /* 設定文字顏色 */
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header>
+            <h1 class="logo"><a href="index.html"><img src="img/camera.png" alt="Your Logo">   PHOTOGRAPHY</a></h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#ABOUT">ABOUT</a></li>
+                    <li><a href="index.html#PROJECTS">PROJECTS</a></li>
+                    <li><a href="https://www.instagram.com/pig_photo318/"><img src="img/instagram.png" alt="ig"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>City & Food</h1>
+        <div class="portfolio">
+            <div>
+                <a href="img/城市/86D5999C-8E52-4C99-8C36-3BE95CC95639.JPEG" 
+                    data-lightbox="christmas"
+                    data-title="📷 KODAK F9 🎞KODAK 250D/5207">
+                    <img src="img/城市/86D5999C-8E52-4C99-8C36-3BE95CC95639.JPEG" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="img/城市/IMG_4962.jpg" 
+                    data-lightbox="christmas"
+                    data-title="📷 Canon EOS 650D">
+                    <img src="img/城市/IMG_4962.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="img/城市/IMG_5016.jpg" 
+                    data-lightbox="christmas"
+                    data-title="📷 Canon EOS 650D">
+                    <img src="img/城市/IMG_5016.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="img/城市/IMG_5024.jpg" 
+                    data-lightbox="christmas"
+                    data-title="📷 Canon EOS 650D">
+                    <img src="img/城市/IMG_5024.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="img/城市/IMG_5051.jpg" 
+                    data-lightbox="christmas"
+                    data-title="📷 Canon EOS 650D">
+                    <img src="img/城市/IMG_5051.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="img/城市/IMG_5096.jpg" 
+                    data-lightbox="christmas"
+                    data-title="📷 Canon EOS 650D">
+                    <img src="img/城市/IMG_5096.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="img/城市/IMG_6148.jpg" 
+                    data-lightbox="christmas"
+                    data-title="📷 Canon EOS 650D">
+                    <img src="img/城市/IMG_6148.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="img/城市/IMG_7942.jpg" 
+                    data-lightbox="christmas"
+                    data-title="📷 Canon EOS 650D">
+                    <img src="img/城市/IMG_7942.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="img/城市/IMG_8128.jpg" 
+                    data-lightbox="christmas"
+                    data-title="📷 Canon EOS 650D">
+                    <img src="img/城市/IMG_8128.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="iimg/城市/IMG_8181.jpg" 
+                    data-lightbox="christmas"
+                    data-title="📷 Canon EOS 650D">
+                    <img src="img/城市/IMG_8181.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="img/食物/IMG_7646.jpg" 
+                    data-lightbox="christmas"
+                    data-title="📷 Canon EOS 650D">
+                    <img src="img/食物/IMG_7646.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="img/食物/IMG_7647.jpg" 
+                    data-lightbox="christmas"
+                    data-title="📷 Canon EOS 650D">
+                    <img src="img/食物/IMG_7647.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="img/食物/IMG_7655.PNG" 
+                    data-lightbox="christmas"
+                    data-title="📷 Canon EOS 650D">
+                    <img src="img/食物/IMG_7655.PNG" alt="">
+                </a>
+            </div>
+        </div>
+        <div id="View-Projects">
+            <p><a href="view.html"><- View Projects</a></p>
+        </div>
+        <div>
+            <footer>
+                <p> © 2023 by YUAN-PING WANG</p>
+            </footer>
+        </div>
+ 
+
+        <script src="lightbox-plus-jquery.min.js"></script>
+</body>
+
+</html>
